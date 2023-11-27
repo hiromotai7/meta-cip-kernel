@@ -5,23 +5,13 @@ Please see the corresponding sections below for details.
 Dependencies
 ============
 
-  URI: <first dependency>
-  branch: <branch name>
+  Under AGL UCB 16 (Prickly Pike).
 
-  URI: <second dependency>
-  branch: <branch name>
-
-  .
-  .
-  .
-
-Patches
+Patches or Issues
 =======
 
-Please submit any patches against the meta-cip-kernel layer to the xxxx mailing list (xxxx@zzzz.org)
-and cc: the maintainer:
-
-Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
+- Please submit any patches or issues against the meta-cip-kernel layer on the github,
+  Not to mail AGL mailing lists.
 
 Table of Contents
 =================
@@ -29,13 +19,16 @@ Table of Contents
   I. Adding the meta-cip-kernel layer to your build
  II. Misc
 
-
 I. Adding the meta-cip-kernel layer to your build
 =================================================
 
-Run 'bitbake-layers add-layer meta-cip-kernel'
+Run 'bitbake-layers add-layer meta-cip-kernel' within AGL build environment.
 
 II. Misc
 ========
 
---- replace with specific information about the meta-cip-kernel layer ---
+Add the following line in conf/local.conf of the build directory if you use AMD GPU.
+
+```
+MACHINE_EXTRA_RRECOMMENDS:append = "linux-firmware-amdgpu"
+```
