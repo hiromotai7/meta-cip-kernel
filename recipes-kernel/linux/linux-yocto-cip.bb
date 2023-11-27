@@ -57,11 +57,16 @@ require recipes-kernel/linux/linux-yocto.inc
 
 SRC_URI += " \
     git://git.kernel.org/pub/scm/linux/kernel/git/cip/linux-cip.git;branch=${LINUX_CIP_BRANCH};protocol=https \
+    git://git.yoctoproject.org/yocto-kernel-cache;type=kmeta;name=meta;branch=${LINUX_CIP_KMETA_BRANCH};destsuffix=${KMETA} \
     "
 
 LINUX_VERSION = "6.1.59"
 LINUX_VERSION_EXTENSION:append = "-cip8"
 LINUX_CIP_BRANCH ?= "linux-6.1.y-cip"
+
+LINUX_CIP_KMETA_BRANCH = "yocto-6.1"
+SRCREV_meta = "a7bfe6ed5d665b094b3e2d30c4cd94dece2c75f3"
+KMETA = "kernel-meta"
 
 SRCREV = "5ac26de5cee674d669fd90d11fb844eaf356ec9c"
 
