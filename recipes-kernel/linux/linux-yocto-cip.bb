@@ -74,7 +74,7 @@ PV = "${LINUX_VERSION}-cip8"
 
 # Override COMPATIBLE_MACHINE to include your machine in a copy of this recipe
 # file. Leaving it empty here ensures an early explicit build failure.
-COMPATIBLE_MACHINE = "(^$)"
+COMPATIBLE_MACHINE = "^(qemux86|qemux86-64|qemuarm|qemuarmv5|qemuarm64|qemuppc|qemumips|rpi)$"
 
 ## need to update license checksum to linux-6.1
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
