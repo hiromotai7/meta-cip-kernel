@@ -68,6 +68,10 @@ LINUX_CIP_KMETA_BRANCH = "yocto-6.1"
 SRCREV_meta = "a7bfe6ed5d665b094b3e2d30c4cd94dece2c75f3"
 KMETA = "kernel-meta"
 
+SRC_URI:append:qemux86-64 = " \
+    file://qemu-x86_64-amdgpu.cfg \
+    "
+
 SRCREV = "5ac26de5cee674d669fd90d11fb844eaf356ec9c"
 
 PV = "${LINUX_VERSION}-cip8"
