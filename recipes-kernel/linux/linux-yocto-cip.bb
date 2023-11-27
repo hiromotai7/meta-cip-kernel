@@ -1,3 +1,6 @@
+# Copyright (C) 2023 Hirotaka Motai <hirotaka.motai@miraclelinux.com>
+# Released under the MIT license (see COPYING.MIT for the terms)
+
 SUMMARY = "An example kernel recipe that uses the linux-yocto and oe-core"
 # linux-yocto-custom.bb:
 #
